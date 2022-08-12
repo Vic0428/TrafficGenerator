@@ -32,7 +32,7 @@ if __name__=="__main__":
     parser.add_argument("--num_spines", type=int, help="Number of core switches (determines bisection bandwidth).", default=1)
     parser.add_argument("--num_leaves", type=int, help="Number of ToR switches/racks per cluster.", default=1)
     parser.add_argument("--num_servers", type=int, help="Number of servers per rack.", default=2)
-    parser.add_argument("--end_time", type=int, help="End time in seconds.", default=500)
+    parser.add_argument("--end_time", type=float, help="End time in seconds.", default=1.0)
     args = parser.parse_args()
 
     seed = args.seed
