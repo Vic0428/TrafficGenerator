@@ -110,14 +110,10 @@ if __name__=="__main__":
                     continue
                 
                 flow_array = traffic_matrix[local_server][remote_server]
-                outf.write("<%d, %d>: " % (local_server, remote_server))
+                outf.write("start_time, flow_size (#bytes)\n")
 
                 first = True
                 for d in flow_array:
-                    if first:
-                        first = False
-                    else:
-                        outf.write("; ")
-                    outf.write("%.9f %d" % (d[0], d[1]))
+                    outf.write("%.9f %d\n" % (d[0], d[1]))
 
                 outf.write("\n")
